@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cookie Clicker</string>
+    <string name="buttonName">Click</string>
+    <string name="textName">Cookie Clicker</string>
+    <string name="amountName">Times clicked: </string>
+    <integer name="amountInt">0</integer>
+
+</resources>
