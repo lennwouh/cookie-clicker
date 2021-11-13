@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cookie Clicker</string>
+    <string name="app_name">Goose Clicker</string>
     <string name="buttonName">Click</string>
     <string name="textName">Goose Clicker</string>
     <string name="amountName">Times clicked: </string>
