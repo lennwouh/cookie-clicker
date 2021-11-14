@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -22,12 +21,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-
-
         setContentView(R.layout.activity_main);
         text2 = (TextView) findViewById(R.id.textView5);      //link Java variable to XML TextView + initialize variable
-
 
         ImageButton imgBtn = (ImageButton) findViewById(R.id.imageButton2);
         imgBtn.setOnClickListener(new View.OnClickListener() {
@@ -36,16 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 clickerScore++;
                 System.out.println(clickerScore);
                 text2.setText("" + clickerScore);        //change text of XML TextView + String required => format properly
-
+                
+            if(clickerScore % 2 == 0){                          //modulo
+                imgBtn.setImageResource(R.drawable.h9m39vv630h52);       //change image if clickerScore is even
             }
+            else{
+                imgBtn.setImageResource(R.drawable.h9m39vv630h51);      //change image if clickerScore is odd
+            }
+
+        }
 
         });
 
     }
 
-
     //Android Lifecycle
-   
 
     public void onStop(){
         super.onStop();
@@ -85,17 +85,13 @@ public class MainActivity extends AppCompatActivity {
     public void onDestroy(){
         super.onDestroy();
         System.out.println("onDestroy");
+        
     }
 
     public void onRestart(){
         super.onRestart();
         System.out.println("onRestart");
     }
-
-
-    
-
-
 }
 
 
