@@ -84,4 +84,14 @@
                  app:layout_constraintBottom_toBottomOf="parent" tools:ignore="ContentDescription"
                  app:layout_constraintHorizontal_bias="0.413" app:layout_constraintVertical_bias="0.532"/>
 
+    <ImageButton android:layout_width="65dp"
+                 android:layout_height="61dp"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable"
+                 app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginBottom="89dp"
+                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent" tools:ignore="ContentDescription"
+                 app:layout_constraintHorizontal_bias="0.104" app:layout_constraintVertical_bias="0.0"
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
