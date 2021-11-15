@@ -4,6 +4,7 @@
     <string name="textName">Goose Clicker</string>
     <string name="amountName">Times clicked: </string>
     <string name="amountInt">0</string>
+    <string name="settings">Settings</string>
     <color name="backgroundColor">#dfc0ff</color>
     <color name="viewBackgroundColor">#B874FF</color>
 
