@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -17,21 +18,24 @@ public class MainActivity extends AppCompatActivity {
     private TextView text2;           //declare variable in class => can be used in different functions other than onCreate()
     public int clickerScore = 0;
     public SharedPreferences sharedPreferences;
+    private View view1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text2 = (TextView) findViewById(R.id.textView5);      //link Java variable to XML TextView + initialize variable
-
+        view1 = (View) findViewById(R.id.view);
+        view1.setVisibility(View.GONE);
         ImageButton imgBtn = (ImageButton) findViewById(R.id.imageButton2);
+
         imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 clickerScore++;
                 System.out.println(clickerScore);
                 text2.setText("" + clickerScore);        //change text of XML TextView + String required => format properly
-                
+
             if(clickerScore % 2 == 0){                          //modulo
                 imgBtn.setImageResource(R.drawable.h9m39vv630h52);       //change image if clickerScore is even
             }
@@ -40,8 +44,17 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
         });
+
+        ImageButton imgBtn2 = (ImageButton) findViewById(R.id.imageButton1);
+        imgBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view1.setVisibility(View.VISIBLE);
+
+            }
+        });
+
 
     }
 
